@@ -1,0 +1,42 @@
+Beam_Tools:
+  -
+    name: modeling
+    type: menu
+    items:
+    -
+      name: check
+      type: action
+      cmd: "import model.check.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow();ui.show();"
+    -
+      name: publish
+      type: action
+      cmd: "import publish.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow('modeling');ui.show();"
+    -
+      name: tools
+      type: menu
+      items:
+      -
+        name: createsphere
+        type: action
+        cmd: "cmds.sphere()"
+  
+  -
+    name: rigging
+    type: menu
+    items:
+    -
+      name: check
+      type: action
+      cmd: "import rigging.check.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow();ui.show();"
+    -
+      name: publish
+      type: action
+      cmd: "import publish.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow('rigging');ui.show();"
+    -
+      name: tools
+      type: menu
+      items:
+      -
+        name: createsphere
+        type: action
+        cmd: "cmds.sphere()"
