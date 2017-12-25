@@ -32,9 +32,9 @@ def MayaLoadWindow(step=""):
     return beamWindow
 
 def ShowWindow(maya_win,step=""):
-    from ..core import check_form as check_form
-    reload(check_form)
-    beamWindow = check_form.From(maya_win)
+    from ..core import taskview_form
+    reload(taskview_form)
+    beamWindow = taskview_form.From(maya_win)
     beamWindow.show()
     return beamWindow
 
