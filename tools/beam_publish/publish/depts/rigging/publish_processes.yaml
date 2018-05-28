@@ -1,0 +1,15 @@
+#version: "1.0"
+Gen: 
+  -
+    type: "gen"
+    name: "sence_in_work_path"
+    mode: "downstream"
+  -
+    type: "gen"
+    name: "check_publish_info"
+    mode: "downstream"
+Rig:
+  -
+    type: "rigging"
+    name: "check_version_name"
+    mode: "downstream"

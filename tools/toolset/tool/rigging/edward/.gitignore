@@ -1,0 +1,17 @@
+*.py~
+*.ini
+*.mel~
+*.db
+*.*~
+*.ncb
+*.sln
+*.suo
+*.user
+*.qrc
+*.bmp
+*.jpg
+*.psd
+*.dump
+python_pyside
+bac
+setup

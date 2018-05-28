@@ -29,6 +29,10 @@ Beam_Tools:
       type: action
       cmd: "import rigging.taskview.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow();ui.show();"
     -
+      name: pipline_tool
+      type: action
+      cmd: "import rigging.pipline_tool.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow();ui.show();"
+    -
       name: check
       type: action
       cmd: "import rigging.check.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow();ui.show();"
@@ -37,10 +41,18 @@ Beam_Tools:
       type: action
       cmd: "import publish.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow('rigging');ui.show();"
     -
+      name: dslSculptInbetweenEditor1.0
+      type: action
+      cmd: "import rigging.dslSculptInbetween.dslSculptInbetweenEditor as dslSie;create = dslSie.SculptInbetweenEditor();create.ui();"
+    -
+      name: correctiveshapedriver
+      type: action
+      cmd: "import rigging.edward.python.edo_autoConnectBlendshapesInbetweenUI.showUi as UI;reload(UI);"
+    -
       name: tools
       type: menu
       items:
       -
-        name: createsphere
+        name: riggingtools
         type: action
-        cmd: "cmds.sphere()"
+        cmd: "import rigging.tools.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow();ui.show();"

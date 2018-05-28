@@ -1,0 +1,20 @@
+//skeleton name:drive ctrl name:parent skeleton name:rotation
+C_head_jnt:C_head_ctrl:C_neck1_jnt:C_neck1_ctrl;90,0,0
+L_footDrv1_drv:L_footFk1_ctrl:L_footDrv0_drv:0,0,90
+L_footDrv0_drv:L_footFk0_ctrl:L_legDrv1_drv:0,0,90;90,0,0
+L_legDrv1_drv:L_legFk1_ctrl:L_uppLegikSpl3_jnt:0,0,90
+L_legDrv0_drv:L_legFk0_ctrl:L_pelvis_jnt:0,0,90
+L_pelvis_jnt:L_pelvis_ctrl:C_hips1_ctrl:0,0,90
+L_clav1_jnt:L_clav1_ctrl:C_spineFk3Offset_jnt:0,0,0
+L_armDrv0_drv:L_armFk0_ctrl:L_clav1_jnt:0,0,0
+L_armDrv1_drv:L_armFk1_ctrl:L_uppArmikSpl3_jnt:0,0,0
+L_hand_jnt:L_handFk_ctrl:L_lowArmikSpl3_jnt:L_handFk_ctrl;0,90,0
+R_footDrv1_drv:R_footFk1_ctrl:R_footDrv0_drv:0,0,90
+R_footDrv0_drv:R_footFk0_ctrl:R_legDrv1_drv:0,0,90;90,0,0
+R_legDrv1_drv:R_legFk1_ctrl:R_uppLegikSpl3_jnt:0,0,90
+R_legDrv0_drv:R_legFk0_ctrl:R_pelvis_jnt:0,0,90
+R_pelvis_jnt:R_pelvis_ctrl:C_hips1_ctrl:0,0,90
+R_clav1_jnt:R_clav1_ctrl:C_spineFk3Offset_jnt:0,0,0
+R_armDrv0_drv:R_armFk0_ctrl:R_clav1_jnt:0,0,0
+R_armDrv1_drv:R_armFk1_ctrl:R_uppArmikSpl3_jnt:0,0,0
+R_hand_jnt:R_handFk_ctrl:R_lowArmikSpl3_jnt:R_handFk_ctrl;0,90,0

@@ -1,0 +1,23 @@
+#version: "1.0"
+Gen:
+  -
+    type: "gen"
+    name: "check_publish_info"
+    skip: false
+  -
+    type: "gen"
+    name: "sence_in_work_path"
+    skip: false
+  -
+    type: "gen"
+    name: "check_maya_file_plugs"
+    skip: false
+Rig:
+  -
+    type: "rigging"
+    name: "check_version_name"
+    skip: false
+  -
+    type: "gen"
+    name: "check_maya_issave"
+    skip: false

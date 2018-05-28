@@ -1,0 +1,26 @@
+global proc AEMTremap_connectRemapArributeToValue(string $nodename , int $index)
+{
+//string $nodename="MTremapValue1";
+//int $index=0;
+string $indexstr=string($index);
+string $connects[]=`listConnections -s false -d true -p true ($nodename+".value")`;
+int $i=0;
+
+for ($i = 0 ; $i <size($connects) ; $i++ )
+{
+    string $temp[];
+    string $connect = $connects[$i];
+    tokenize $connect "."  $temp;
+    if ($temp[0] == $nodename)
+    {
+        print "disconnect all attribute connection  connected from Value \n";
+        disconnectAttr ($nodename+".value") $connect;
+    };
+};
+
+//print "connect  ... "+$nodename+".remaps["+$indexstr+"].remap    ...    to    " ;
+connectAttr -f ($nodename+".remaps["+$indexstr+"].remap") ($nodename+".value") ;
+disconnectAttr ($nodename+".remaps["+$indexstr+"].remap") ($nodename+".value") ;
+connectAttr -f ($nodename+".value") ($nodename+".remaps["+$indexstr+"].remap");
+setAttr ($nodename+".remapCurrentIndex") $index;
+};

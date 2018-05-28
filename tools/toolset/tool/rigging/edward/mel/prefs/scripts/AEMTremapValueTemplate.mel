@@ -1,0 +1,19 @@
+global proc AEMTremapValueTemplate( string $nodeName )
+{
+    //print "AEMTremapValueTemplate ... ... \n";
+    //print $nodeName;
+	AEswatchDisplay  $nodeName;
+	editorTemplate -beginScrollLayout;
+		editorTemplate -beginLayout ("MT Remap Value Attributes") -collapse 0;
+			AEMTremap_addRampControl ($nodeName+".value");
+		editorTemplate -endLayout;
+
+		editorTemplate -beginLayout ("MT Remaps Array Attribute") -collapse 1;
+			editorTemplate -addControl "remaps";
+		editorTemplate -endLayout;
+	
+		AEdependNodeTemplate $nodeName;
+
+	editorTemplate -addExtraControls;
+	editorTemplate -endScrollLayout;
+}
