@@ -8,7 +8,7 @@ import glob
 import maya.cmds as cmds
 from model.check.ui.head import *
 from model.check.ui.ui_main_window import ui_main_window
-class Response(QtGui.QMainWindow):
+class Response(QtWidgets.QMainWindow):
 
     def __init__(self,parent=None):
         super(Response,self).__init__(parent)
@@ -26,7 +26,7 @@ class Response(QtGui.QMainWindow):
 
 if __name__=="__main__":
     import sys
-    app = QtGui.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
     ui = Response()
     ui.show()
     sys.exit(app.exec_())

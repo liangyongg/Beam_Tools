@@ -20,7 +20,7 @@ try:
 except:
     pass
 
-class asset_create_widget(QtGui.QDialog):
+class asset_create_widget(QtWidgets.QDialog):
 
     def __init__(self,parent = None):
         super(asset_create_widget,self).__init__(parent)
@@ -28,36 +28,36 @@ class asset_create_widget(QtGui.QDialog):
         #self.locl_work_path = ''
 
         self.setObjectName("asset_create_Form")
-        self.verticalLayout = QtGui.QVBoxLayout(self)
+        self.verticalLayout = QtWidgets.QVBoxLayout(self)
 
-        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
 
-        self.label = QtGui.QLabel(self)
+        self.label = QtWidgets.QLabel(self)
         self.horizontalLayout.addWidget(self.label)
 
-        self.lineEdit = QtGui.QLineEdit(self)
+        self.lineEdit = QtWidgets.QLineEdit(self)
         self.lineEdit.setObjectName("lineEdit")
 
         self.horizontalLayout.addWidget(self.lineEdit)
         self.verticalLayout.addLayout(self.horizontalLayout)
 
-        self.verticalLayout_2 = QtGui.QHBoxLayout()
+        self.verticalLayout_2 = QtWidgets.QHBoxLayout()
 
-        self.pushButton = QtGui.QPushButton()
-        self.pushButton_apply = QtGui.QPushButton ()
-        self.pushButton_close = QtGui.QPushButton ()
+        self.pushButton = QtWidgets.QPushButton()
+        self.pushButton_apply = QtWidgets.QPushButton ()
+        self.pushButton_close = QtWidgets.QPushButton ()
         self.verticalLayout_2.addWidget(self.pushButton)
         self.verticalLayout_2.addWidget (self.pushButton_apply)
         self.verticalLayout_2.addWidget (self.pushButton_close)
         self.verticalLayout.addLayout(self.verticalLayout_2)
 
-        self.setWindowTitle(QtGui.QApplication.translate("asset_create", "asset_create", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("asset_create", "name:", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushButton.setText(QtGui.QApplication.translate("asset_create", "create", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushButton_apply.setText(QtGui.QApplication.translate ("asset_create", "apply", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushButton_close.setText(QtGui.QApplication.translate ("asset_create", "close", None, QtGui.QApplication.UnicodeUTF8))
+        self.setWindowTitle(QtWidgets.QApplication.translate("asset_create", "asset_create", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.label.setText(QtWidgets.QApplication.translate("asset_create", "name:", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.pushButton.setText(QtWidgets.QApplication.translate("asset_create", "create", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.pushButton_apply.setText(QtWidgets.QApplication.translate ("asset_create", "apply", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.pushButton_close.setText(QtWidgets.QApplication.translate ("asset_create", "close", None, QtWidgets.QApplication.UnicodeUTF8))
 
-class customize_widget(QtGui.QWidget):
+class customize_widget(QtWidgets.QWidget):
 
     def __init__(self,listwidget,parent = None):
         super(customize_widget,self).__init__(parent)
@@ -71,27 +71,27 @@ class customize_widget(QtGui.QWidget):
 
         self.maya_func = maya_customize()
 
-        layout = QtGui.QHBoxLayout()
+        layout = QtWidgets.QHBoxLayout()
         layout.setContentsMargins(0,0,0,0)
 
-        self.pushbutton = QtGui.QPushButton(u"apply")
-        self.pushbutton_version = QtGui.QPushButton (u"save version")
+        self.pushbutton = QtWidgets.QPushButton(u"apply")
+        self.pushbutton_version = QtWidgets.QPushButton (u"save version")
 
-        self.label = QtGui.QLabel()
+        self.label = QtWidgets.QLabel()
 
-        self.combox_bf = QtGui.QComboBox()
+        self.combox_bf = QtWidgets.QComboBox()
         self.combox_bf.addItem('body')
         self.combox_bf.addItem ('facial')
         #self.combox_bf.hide()
 
-        self.combox_step = QtGui.QComboBox()
+        self.combox_step = QtWidgets.QComboBox()
         self.combox_step.addItem('model')
         self.combox_step.addItem ('template')
         self.combox_step.addItem ('set')
         self.combox_step.addItem ('rig')
         self.combox_step.addItem ('import')
 
-        self.combox_type = QtGui.QComboBox()
+        self.combox_type = QtWidgets.QComboBox()
         self.combox_type.addItem('open')
         self.combox_type.addItem ('reference')
         self.combox_type.addItem ('import')
@@ -124,7 +124,7 @@ class customize_widget(QtGui.QWidget):
         self.customContextMenuRequested.connect (self.showContextMenu)
 
         # 创建QMenu
-        self.contextMenu = QtGui.QMenu(self)
+        self.contextMenu = QtWidgets.QMenu(self)
         #self.deleteaction = self.contextMenu.addAction ("delete")
         contextaction = self.contextMenu.addSeparator()
         self.showinexplorer = self.contextMenu.addAction ("show in explorer")
@@ -132,7 +132,7 @@ class customize_widget(QtGui.QWidget):
         self.showinexplorer.triggered.connect (lambda : self.show_in_explorer(self.project_path))
 
     def showContextMenu(self):
-        self.contextMenu.move(QtGui.QCursor.pos())
+        self.contextMenu.move(QtWidgets.QCursor.pos())
         self.contextMenu.show()
 
     def openfile(self,path):
@@ -145,9 +145,9 @@ class customize_widget(QtGui.QWidget):
         if file_type == "open":
             is_edit = cmds.file(q=1,mf=1)
             if is_edit:
-                reply = QtGui.QMessageBox.question (self, 'Save Changes', '',
-                                                    QtGui.QMessageBox.Yes | QtGui.QMessageBox.No, QtGui.QMessageBox.No)
-                if reply == QtGui.QMessageBox.Yes:
+                reply = QtWidgets.QMessageBox.question (self, 'Save Changes', '',
+                                                    QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)
+                if reply == QtWidgets.QMessageBox.Yes:
                     file_current = cmds.file(q=1,sceneName=1)
                     self.savafile(file_current)
                 else:
@@ -179,9 +179,9 @@ class customize_widget(QtGui.QWidget):
             select_delList.append (str (self.listwidget.item (id.row ()).text ()))
         print select_delList
         if select_delList:
-            reply = QtGui.QMessageBox.question (self, 'delete', 'You sure to delete?',
-                                                QtGui.QMessageBox.Yes | QtGui.QMessageBox.No, QtGui.QMessageBox.No)
-            if reply == QtGui.QMessageBox.Yes:
+            reply = QtWidgets.QMessageBox.question (self, 'delete', 'You sure to delete?',
+                                                QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)
+            if reply == QtWidgets.QMessageBox.Yes:
                 for del_sel in select_delList:
                     delList = os.listdir (delDir)
 
@@ -200,8 +200,8 @@ class customize_widget(QtGui.QWidget):
 
 
 
-#from PySide import QtGui,QtCore
-class From(QtGui.QMainWindow):
+#from PySide import QtWidgets,QtCore
+class From(QtWidgets.QMainWindow):
 
     def __init__(self,parent = None):
         super(From,self).__init__(parent)
@@ -258,7 +258,7 @@ class From(QtGui.QMainWindow):
         '''self.characterprops_listWidget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.characterprops_listWidget.customContextMenuRequested.connect(self.showContextMenu)
 
-        self.contextMenu = QtGui.QMenu()
+        self.contextMenu = QtWidgets.QMenu()
         self.deleteaction = self.contextMenu.addAction("delete")
         contextaction = self.contextMenu.addSeparator()
         self.showinexplorer = self.contextMenu.addAction ("show in explorer")
@@ -435,7 +435,7 @@ class From(QtGui.QMainWindow):
             #widget_dict = {}
             for foler in folder_list:
                 connection_list = []
-                item = QtGui.QListWidgetItem()
+                item = QtWidgets.QListWidgetItem()
                 self.customize_widget = customize_widget (self.characterprops_listWidget)
                 widget = self.customize_widget
                 #connectionwidgets_list.append(widget)
@@ -459,9 +459,9 @@ class From(QtGui.QMainWindow):
             select_delList.append(str(self.characterprops_listWidget.item(id.row()).text()))
         print select_delList
         if select_delList:
-            reply = QtGui.QMessageBox.question (self, 'delete', 'You sure to delete?',
-                                                QtGui.QMessageBox.Yes | QtGui.QMessageBox.No, QtGui.QMessageBox.No)
-            if reply == QtGui.QMessageBox.Yes:
+            reply = QtWidgets.QMessageBox.question (self, 'delete', 'You sure to delete?',
+                                                QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)
+            if reply == QtWidgets.QMessageBox.Yes:
                 for del_sel in select_delList:
                     delList = os.listdir (delDir)
 
@@ -551,12 +551,12 @@ class From(QtGui.QMainWindow):
             print "copy %s file is already exsits!!!"%(localDir)
 
     def showContextMenu(self):
-        self.contextMenu.move(QtGui.QCursor.pos())
+        self.contextMenu.move(QtWidgets.QCursor.pos())
         self.contextMenu.show()
 
 if __name__=="__main__":
     import sys
-    app = QtGui.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
     ui = From()
     ui.showWinodow()
     sys.exit(app.exec_())

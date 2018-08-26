@@ -4,18 +4,18 @@ from .head import *
 import os
 import shutil
 
-class Menu_ListWidget(QtGui.QListWidget):
+class Menu_ListWidget(QtWidgets.QListWidget):
 
     def __init__(self,parent = None):
         super(Menu_ListWidget,self).__init__(parent)
 
     def contextMenuEvent(self,event):
-        popMenu = QtGui.QMenu(self)
-        action = QtGui.QAction(QtGui.QIcon(""),"delete",self)
+        popMenu = QtWidgets.QMenu(self)
+        action = QtWidgets.QAction(QtWidgets.QIcon(""),"delete",self)
 
-        if self.itemAt(self.mapFromGlobal(QtGui.QCursor.pos())):
+        if self.itemAt(self.mapFromGlobal(QtWidgets.QCursor.pos())):
             popMenu.addAction(action)
-        popMenu.exec_(QtGui.QCursor.pos())
+        popMenu.exec_(QtWidgets.QCursor.pos())
 
     def delete_current_asset(self,delDir):
         select_delList = []

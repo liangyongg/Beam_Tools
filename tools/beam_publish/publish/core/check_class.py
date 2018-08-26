@@ -15,7 +15,7 @@ def import_module(name):
         module = getattr(module,mod)
     return module
 
-class qtread(QtCore.QThread):
+class qtread(QThread):
 
     def __init__(self,fun_class,args,parent = None):
         super(qtread,self).__init__(parent)
@@ -26,7 +26,7 @@ class qtread(QtCore.QThread):
     def run(self):
         self.fun_class(self.args)
 
-class check_widget(QtGui.QWidget):
+class check_widget(QWidget):
 
     def __init__(self,info_widget,module_step,tab_name,check_type,check_name,allow_skip,cous_info={},publish_widget=None):
         super (check_widget, self).__init__ ()
@@ -72,29 +72,29 @@ class check_widget(QtGui.QWidget):
         self.setupConnections()
 
     def setupUI(self):
-        self.mainHboxLayout = QtGui.QHBoxLayout(self)
-        self.skip_label = QtGui.QLabel(u'check')
-        self.check_label = QtGui.QLabel()
-        self.check_ok = QtGui.QPixmap(r'%s'%(os.path.join(os.path.dirname(__file__).replace("core","icon"),"yes.png")))
-        self.check_no = QtGui.QPixmap(r'%s'%(os.path.join(os.path.dirname(__file__).replace("core","icon"),"no.png")))
-        self.skip_checkbox = QtGui.QCheckBox()
-        self.skip_checkbox.setCheckState(QtCore.Qt.Checked)
+        self.mainHboxLayout = QHBoxLayout(self)
+        self.skip_label = QLabel(u'check')
+        self.check_label = QLabel()
+        self.check_ok = QPixmap(r'%s'%(os.path.join(os.path.dirname(__file__).replace("core","icon"),"yes.png")))
+        self.check_no = QPixmap(r'%s'%(os.path.join(os.path.dirname(__file__).replace("core","icon"),"no.png")))
+        self.skip_checkbox = QCheckBox()
+        self.skip_checkbox.setCheckState(Qt.Checked)
         if not self.allow_skip:
             self.skip_checkbox.setEnabled(False)
-        self.check_button = QtGui.QPushButton()
+        self.check_button = QPushButton()
         self.check_button.setMinimumWidth(200)
         self.check_button.setText(self.check_name)
 
         if self.moudle_step=="publish_processes" and Config.Config.DEBUG=="pub":
             self.check_button.setEnabled(False)
 
-        self.fix_button = QtGui.QPushButton()
+        self.fix_button = QPushButton()
         self.fix_button.setText(u'repair')
         self.fix_button.setEnabled(True)
 
-        spacerItem=QtGui.QSpacerItem(100,20,QtGui.QSizePolicy.Minimum,QtGui.QSizePolicy.Expanding)
+        spacerItem=QSpacerItem(100,20,QSizePolicy.Minimum,QSizePolicy.Expanding)
 
-        self.descipt_button = QtGui.QPushButton()
+        self.descipt_button = QPushButton()
         self.descipt_button.setText(u'?')
         self.mainHboxLayout.addWidget(self.check_label)
         self.mainHboxLayout.addItem(spacerItem)
@@ -219,7 +219,7 @@ class check_widget(QtGui.QWidget):
         return
 
     def show_dedcription(self):
-        QtGui.QMessageBox.about(self,u'description',self.moudle_type+'.'+self.moudle_name+'.'+self.description)
+        QMessageBox.about(self,u'description',self.moudle_type+'.'+self.moudle_name+'.'+self.description)
         return
 
     def clear_result(self):
@@ -265,8 +265,8 @@ class check_widget(QtGui.QWidget):
 if __name__ == "__main__":
     import sys
 
-    app=QtGui.QApplication(sys.argv)
-    info_widget=QtGui.QWidget()
+    app=QApplication(sys.argv)
+    info_widget=QWidget()
     tab_name="tab_name"
     check_type="gen"
     check_name="version_name"

@@ -29,7 +29,7 @@ class publish_info():
     def __init__(self):
         pass
 
-class Response(QtGui.QMainWindow):
+class Response(QMainWindow):
 
     def __init__(self,parent=None,step="rigging"):
         super(Response,self).__init__(parent)
@@ -352,7 +352,7 @@ class Response(QtGui.QMainWindow):
                 current_check=False
                 self.check_res_info[current_tab_name]=current_check
                 return False
-            QtCore.QCoreApplication.processEvents()
+            QCoreApplication.processEvents()
         self.check_res_info[current_tab_name]=current_check
         print self.check_res_info
 
@@ -361,7 +361,7 @@ class Response(QtGui.QMainWindow):
 
 if __name__=="__main__":
     import sys
-    app = QtGui.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     ui = Response()
     ui.show()
     sys.exit(app.exec_())

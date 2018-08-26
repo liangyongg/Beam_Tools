@@ -4,7 +4,7 @@ sys.path.append(r"E:\Beam_tools\tools\beam_publish")
 from publish.ui.head import *
 import maya.cmds as cmds
 import maya.OpenMayaUI as OpenMayaUI
-#from PyQt4 import QtGui,QtCore
+#from PyQt4 import QtWidgets,QtCore
 try:
     import shiboken2
 except:
@@ -13,13 +13,13 @@ except:
 def getMayaWindow():
     ptr = OpenMayaUI.MQtUtil.mainWindow()
     try:
-        warp = shiboken2.wrapInstance (long (ptr), QtGui.QWidget)
+        warp = shiboken2.wrapInstance (long (ptr), QWidget)
     except:
-        warp = shiboken.wrapInstance (long (ptr), QtGui.QWidget)
+        warp = shiboken.wrapInstance (long (ptr), QWidget)
     return warp
 
 def MayaLoadWindow(step="mod"):
-    for win in QtGui.QApplication.topLevelWidgets():
+    for win in QApplication.topLevelWidgets():
         if not hasattr(win,'isWindow'):
             continue
         if not win.isWindow():
@@ -40,6 +40,6 @@ def ShowWindow(maya_win,step):
 
 if __name__=="__main__":
     import sys
-    app = QtGui.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     ui = ShowWindow()
     sys.exit(app.exec_())

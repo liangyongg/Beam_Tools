@@ -68,8 +68,8 @@ def bulid_ui(tabwidget,check_yaml,process_yaml,infowidget,cousinfo,publishwidget
     check_group_list.append("process")
 
     for check_group_item in check_group_list:
-        widget = QtGui.QWidget()
-        mainVboxLayout = QtGui.QVBoxLayout(widget)
+        widget = QWidget()
+        mainVboxLayout = QVBoxLayout(widget)
         widget.setContentsMargins(0,0,0,0)
         if check_group_item != "process":
             module_step = "publish_check"
@@ -86,7 +86,7 @@ def bulid_ui(tabwidget,check_yaml,process_yaml,infowidget,cousinfo,publishwidget
             all_check_lib[check_group_item][check_item]["class"]=check_item_class
             mainVboxLayout.addWidget(check_item_class)
         mainVboxLayout.setSpacing(1)
-        spacerItem=QtGui.QSpacerItem(20,300,QtGui.QSizePolicy.Minimum,QtGui.QSizePolicy.Expanding)
+        spacerItem=QSpacerItem(20,300,QSizePolicy.Minimum,QSizePolicy.Expanding)
         mainVboxLayout.addItem(spacerItem)
         tabwidget.addTab(widget,tab_name)
     return all_check_lib,check_groupcheck_item,check_group_list

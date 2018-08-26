@@ -5,14 +5,14 @@ import os
 import inspect
 from head import *
 
-class ui_reference_widget(QtGui.QWidget):
+class ui_reference_widget(QtWidgets.QWidget):
 
     def __init__(self,parent=None):
         super(ui_reference_widget,self).__init__(parent)
         self.setupUi()
 
     def setupUi(self):
-        self.mainVboxLayout = QtGui.QVBoxLayout(self)
+        self.mainVboxLayout = QtWidgets.QVBoxLayout(self)
         path = self.current_path()
         self.main_Widget = self.loadUiWidget(os.path.join(path,"ui_reference_rig.ui"))
         self.mainVboxLayout.addWidget(self.main_Widget)
@@ -33,7 +33,7 @@ class ui_reference_widget(QtGui.QWidget):
         return ui
 
 if __name__ == "__main__":
-    app = QtGui.QApplication (sys.argv)
+    app = QtWidgets.QApplication (sys.argv)
     MainWindow = ui_reference_widget()
     MainWindow.show()
     sys.exit (app.exec_ ())

@@ -13,13 +13,13 @@ except:
 def getMayaWindow():
     ptr = OpenMayaUI.MQtUtil.mainWindow()
     try:
-        warp = shiboken2.wrapInstance (long (ptr), QtGui.QWidget)
+        warp = shiboken2.wrapInstance (long (ptr), QWidget)
     except:
-        warp = shiboken.wrapInstance (long (ptr), QtGui.QWidget)
+        warp = shiboken.wrapInstance (long (ptr), QWidget)
     return warp
 
 def MayaLoadWindow(step=""):
-    for win in QtGui.QApplication.topLevelWidgets():
+    for win in QApplication.topLevelWidgets():
         if not hasattr(win,'isWindow'):
             continue
         if not win.isWindow():
@@ -39,6 +39,6 @@ def ShowWindow(maya_win,step=""):
     return beamWindow
 
 if __name__=="__main__":
-    app = QtGui.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     ui = ShowWindow()
     sys.exit(app.exec_())

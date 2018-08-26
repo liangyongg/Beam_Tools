@@ -8,7 +8,7 @@ from rigging.check.ui.ui_main_window import ui_main_window
 from rigging.check.ui.re_item_form import Item_form
 from rigging.check.ui.re_info_form import Info_form
 #from PySide import QtGui,QtCore
-class From(QtGui.QMainWindow):
+class From(QtWidgets.QMainWindow):
 
     def __init__(self,parent = None):
         super(From,self).__init__(parent)
@@ -26,13 +26,13 @@ class From(QtGui.QMainWindow):
         self.ui_main_window.ui_check_widget.item_area_group.setStyleSheet ('QGroupBox{font-size:18px; font-weight:bold;}')
         self.ui_main_window.ui_check_widget.info_area_group.setStyleSheet ('QGroupBox{font-size:18px; font-weight:bold;}')
         self.ui_main_window.ui_check_widget.logo_label.setPixmap (os.path.join (self._get_icon_path (), 'icons/validation.png'))
-        refresh_icon = QtGui.QIcon()
+        refresh_icon = QtWidgets.QIcon()
         refresh_icon.addFile(os.path.join(self._get_icon_path(), 'icons/refresh.png'))
         self.ui_main_window.ui_check_widget.refresh_btn.setIcon (refresh_icon)
-        continue_icon = QtGui.QIcon()
+        continue_icon = QtWidgets.QIcon()
         continue_icon.addFile(os.path.join(self._get_icon_path(), 'icons/gono.png'))
         self.ui_main_window.ui_check_widget.continue_btn.setIcon (continue_icon)
-        run_icon = QtGui.QIcon()
+        run_icon = QtWidgets.QIcon()
         run_icon.addFile(os.path.join(self._get_icon_path(), 'icons/play_icon.png'))
         self.ui_main_window.ui_check_widget.run_btn.setIcon(run_icon)
         self.ui_main_window.ui_check_widget.skip_btn.setVisible (0)
@@ -203,7 +203,7 @@ class From(QtGui.QMainWindow):
                 if hasattr (instance, "correct"):
                     item_form._ui.correct_btn.setVisible (1)
                 item_form._ui.item_icon.setPixmap (
-                    QtGui.QPixmap (os.path.join (self._get_icon_path (), 'icons/failure.png')))
+                    QtWidgets.QPixmap (os.path.join (self._get_icon_path (), 'icons/failure.png')))
                 item_form._ui.item_icon.setScaledContents (True)
                 if not isinstance (data, dict):
                     return
@@ -212,7 +212,7 @@ class From(QtGui.QMainWindow):
                 self._refresh_ui ()
                 return
             item_form._ui.item_icon.setPixmap (
-                QtGui.QPixmap (os.path.join (self._get_icon_path (), 'icons/success.png')))
+                QtWidgets.QPixmap (os.path.join (self._get_icon_path (), 'icons/success.png')))
             item_form._ui.item_icon.setScaledContents (True)
             item_form._ui.correct_btn.setVisible (0)
             self.item_current_list.remove (item)
@@ -226,7 +226,7 @@ class From(QtGui.QMainWindow):
         for item in self.item_list:
             item_form = self.item_data[item].get('item_form')
             item_form._ui.item_icon.setPixmap(
-                QtGui.QPixmap(os.path.join(self._get_icon_path(), 'icons/clock.png')))
+                QtWidgets.QPixmap(os.path.join(self._get_icon_path(), 'icons/clock.png')))
             item_form._ui.item_icon.setScaledContents(True)
 
     def _clear_item_list(self):
@@ -260,7 +260,7 @@ class From(QtGui.QMainWindow):
 
 if __name__=="__main__":
     import sys
-    app = QtGui.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
     ui = From()
     ui.showWinodow()
     sys.exit(app.exec_())

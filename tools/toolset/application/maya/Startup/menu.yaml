@@ -33,6 +33,10 @@ Beam_Tools:
       type: action
       cmd: "import rigging.pipline_tool.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow();ui.show();"
     -
+      name: beam_editor
+      type: action
+      cmd: "import rigging.beam.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow();ui.show();"
+    -
       name: check
       type: action
       cmd: "import rigging.check.main.maya_load_win as maya_load_win;reload(maya_load_win);ui=maya_load_win.MayaLoadWindow();ui.show();"

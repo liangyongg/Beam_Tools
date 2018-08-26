@@ -19,7 +19,7 @@ def getMayaWindow():
     return warp
 
 def MayaLoadWindow(step=""):
-    for win in QtGui.QApplication.topLevelWidgets():
+    for win in QtWidgets.QApplication.topLevelWidgets():
         if not hasattr(win,'isWindow'):
             continue
         if not win.isWindow():

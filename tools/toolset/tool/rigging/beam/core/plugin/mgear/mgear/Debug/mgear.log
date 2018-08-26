@@ -1,0 +1,65 @@
+﻿生成启动时间为 2018/8/10 17:13:20。
+     1>项目“E:\Beam_tools\tools\toolset\tool\rigging\beam\core\plugin\mgear\mgear\mgear.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /I. /I"C:\Program Files\Autodesk\Maya2016\include" /Zi /nologo /W3 /WX- /Od /D _DEBUG /D WIN32 /D _WINDOWS /D _USRDLL /D NT_PLUGIN /D _HAS_ITERATOR_DEBUGGING=0 /D _SECURE_SCL=0 /D _SECURE_SCL_THROWS=0 /D _SECURE_SCL_DEPRECATE=0 /D _CRT_SECURE_NO_DEPRECATE /D TBB_USE_DEBUG=0 /D __TBB_LIB_NAME=tbb.lib /D REQUIRE_IOSTREAM /D AW_NEW_IOSTREAMS /D Bits64_ /D _WINDLL /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\mgear.pdb" /Gd /TP /errorReport:prompt ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\add10scalarNode.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\curveCns.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\ikfk2Bone.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\interpolateMatrix.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\inverseRotOrder.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\mulMatrix.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\percentageToU.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\rayCastPosition.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\register.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\rollSplineKine.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\slideCurve2.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\spinePointAt.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\springNode.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\squashStretch2.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\trigonometryAngle.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\utils.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\uToPercentage.cpp ..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\vertexPosition.cpp
+         vertexPosition.cpp
+         uToPercentage.cpp
+         utils.cpp
+         trigonometryAngle.cpp
+         squashStretch2.cpp
+         springNode.cpp
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\springNode.cpp(185): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\springNode.cpp(207): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+         spinePointAt.cpp
+         slideCurve2.cpp
+         rollSplineKine.cpp
+         register.cpp
+         rayCastPosition.cpp
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\rayCastPosition.cpp(138): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\rayCastPosition.cpp(149): warning C4305: “初始化”: 从“double”到“float”截断
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\rayCastPosition.cpp(179): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+         percentageToU.cpp
+         mulMatrix.cpp
+         linearInterpolate3DvectorNode.cpp
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp(145): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp(146): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp(147): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp(151): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp(152): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp(153): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp(160): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp(161): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>..\..\..\..\..\..\..\..\..\..\mgear_work\mgear\src\linearInterpolate3DvectorNode.cpp(162): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+         inverseRotOrder.cpp
+         interpolateMatrix.cpp
+         ikfk2Bone.cpp
+         curveCns.cpp
+         add10scalarNode.cpp
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\mgear.mll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\Autodesk\Maya2016\lib" Foundation.lib OpenMaya.lib OpenMayaAnim.lib OpenMayaRender.lib OpenMayaUI.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"Debug\mgear.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:"Debug\mgear.lib" /MACHINE:X64 /export:initializePlugin /export:uninitializePlugin /DLL Debug\add10scalarNode.obj
+         Debug\curveCns.obj
+         Debug\ikfk2Bone.obj
+         Debug\interpolateMatrix.obj
+         Debug\inverseRotOrder.obj
+         Debug\linearInterpolate3DvectorNode.obj
+         Debug\mulMatrix.obj
+         Debug\percentageToU.obj
+         Debug\rayCastPosition.obj
+         Debug\register.obj
+         Debug\rollSplineKine.obj
+         Debug\slideCurve2.obj
+         Debug\spinePointAt.obj
+         Debug\springNode.obj
+         Debug\squashStretch2.obj
+         Debug\trigonometryAngle.obj
+         Debug\utils.obj
+         Debug\uToPercentage.obj
+         Debug\vertexPosition.obj
+            正在创建库 Debug\mgear.lib 和对象 Debug\mgear.exp
+         mgear.vcxproj -> E:\Beam_tools\tools\toolset\tool\rigging\beam\core\plugin\mgear\mgear\Debug\mgear.mll
+     1>已完成生成项目“E:\Beam_tools\tools\toolset\tool\rigging\beam\core\plugin\mgear\mgear\mgear.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:10.98

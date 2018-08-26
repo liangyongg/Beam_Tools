@@ -11,7 +11,7 @@ from ui_reference_widget import ui_reference_widget
 from qtundo.undo import qtundo
 from customize.maya_customize import maya_customize
 
-class ui_reference_window(QtGui.QDialog):
+class ui_reference_window(QtWidgets.QDialog):
 
     def __init__(self,parent = None):
         super(ui_reference_window,self).__init__(parent)
@@ -29,7 +29,7 @@ class ui_reference_window(QtGui.QDialog):
     def setupUi(self):
         self.ui_reference_widget = ui_reference_widget()
         #self.ui_taskview_widget.setupUi(self)
-        QWidgetvboxLayout = QtGui.QVBoxLayout(self)
+        QWidgetvboxLayout = QtWidgets.QVBoxLayout(self)
         QWidgetvboxLayout.addWidget(self.ui_reference_widget)
         QWidgetvboxLayout.setContentsMargins(0,0,0,0)
 
@@ -109,7 +109,7 @@ class ui_reference_window(QtGui.QDialog):
 
 if __name__=="__main__":
     import sys
-    app = QtGui.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
     ui = ui_reference_window()
     ui.show()
     sys.exit(app.exec_())
